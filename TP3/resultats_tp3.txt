@@ -1,0 +1,50 @@
+=== Q1 : cap optimal (pas de 0.1 deg)
+Angle optimal sur la grille : 114.9 deg
+Critere position final trace(BCR_pos) = 13349.547 m^2
+RMS 2D minimale (borne locale) = 115.540 m
+Figures : figures/q1_grille.png, figures/q1_trajectoires.png, figures/q1_incertitudes.png
+=== Q1 : phi = 0 et observabilite
+phi=0 : ecart d'angle max entre trajectoires de la famille = 3.3e-16 rad
+sans a priori, phi=   0.0 : valeurs propres de J = [1.85443421e-14 5.35031095e-03 6.84907147e-02 1.47434548e+02], BCR position = 8.31e+06 m
+sans a priori, phi= 114.9 : valeurs propres de J = [7.12693052e-05 7.60207681e-03 1.09947404e-01 1.46634120e+02], BCR position = 119 m
+=== Q1 : instant de manoeuvre
+manoeuvre a k=10 : phi optimal =  85.0 deg, erreur de position finale =   496.4 m
+manoeuvre a k=25 : phi optimal = 103.0 deg, erreur de position finale =   175.8 m
+manoeuvre a k=50 : phi optimal = 115.0 deg, erreur de position finale =   115.5 m
+manoeuvre a k=75 : phi optimal = 128.0 deg, erreur de position finale =   195.7 m
+manoeuvre a k=90 : phi optimal = 135.0 deg, erreur de position finale =   420.9 m
+=== Q1 : geometrie
+ligne de visee au moment de la manoeuvre : beta = 47.8 deg, distance = 2588 m
+|Dv perpendiculaire| maximal pour phi = 138 deg, nul pour phi = 0 et 276 deg
+=== Q2 : simulation des experiences A / B / C
+=== Q2 : figures du TP
+=== Q2 : valeurs A / B / C
+exp.    k | 3sqrtBCR s  3RMSE s  3sqrtP s | 3sqrtBCR v  3RMSE v  3sqrtP v | dans 3sigma EKF
+A       5 |       1.45     3.36      2.11 |      0.510    2.122     0.632 |  97.6 %
+A      15 |       2.72     9.00      4.28 |      0.231    0.990     0.334 |  93.4 %
+A      30 |       5.04    16.75      7.69 |      0.190    0.739     0.278 |  90.8 %
+B       5 |       1.45     3.20      2.05 |      0.510    1.910     0.762 |  97.6 %
+B      15 |       2.72     7.05      5.27 |      0.231    1.011     0.877 |  98.0 %
+B      30 |       5.04    13.72     13.40 |      0.190    1.167     1.198 |  99.6 %
+C       5 |       1.47     3.20      2.05 |      0.671    1.910     0.762 |  97.6 %
+C      15 |       3.90     7.05      5.27 |      0.811    1.011     0.877 |  98.0 %
+C      30 |      10.60    13.72     13.40 |      1.118    1.167     1.198 |  99.6 %
+A, k=30 : erreur |s| mediane 1.60 m, moyenne quadratique 5.58 m, runs > 3 sigma EKF : 9.2 %
+=== Q2 : efficacite et consistance
+A : k=30, ecart-type de l'erreur normalisee = 1.68 (ideal 1), part hors +-3 = 9.2 %, NEES moyen = 27.51 (ideal 2)
+C : k=30, ecart-type de l'erreur normalisee = 0.97 (ideal 1), part hors +-3 = 0.4 %, NEES moyen = 1.95 (ideal 2)
+=== Q2 : experience A avec un a priori serre
+P0 du TP : σ_s = 10 m, σ_v = 1 m/s : k=30, RMSE s / sqrt(BCR s) = 3.32, RMSE v / sqrt(BCR v) = 3.88
+P0 / 100 : σ_s = 1 m, σ_v = 0.1 m/s : k=30, RMSE s / sqrt(BCR s) = 1.04, RMSE v / sqrt(BCR v) = 1.05
+=== Q2 : reglage de Q dans l'EKF
+Q_EKF =   0.01 Q : k=30, RMSE/sqrt(BCR) position  1.88, vitesse  1.31, dans +-3 sigma  70.0 %
+Q_EKF =    0.1 Q : k=30, RMSE/sqrt(BCR) position  1.73, vitesse  1.23, dans +-3 sigma  85.6 %
+Q_EKF =      1 Q : k=30, RMSE/sqrt(BCR) position  1.30, vitesse  1.04, dans +-3 sigma  99.6 %
+Q_EKF =     10 Q : k=30, RMSE/sqrt(BCR) position  1.55, vitesse  1.42, dans +-3 sigma 100.0 %
+Q_EKF =    100 Q : k=30, RMSE/sqrt(BCR) position  2.33, vitesse  3.13, dans +-3 sigma 100.0 %
+=== Q2 : convergence du Monte-Carlo de la borne
+mc =    100 : 3 sqrt(BCR) = 11.020 m +- 0.608 m (5.52 %)
+mc =    300 : 3 sqrt(BCR) = 10.641 m +- 0.796 m (7.48 %)
+mc =   1000 : 3 sqrt(BCR) = 10.604 m +- 0.562 m (5.30 %)
+mc =   3000 : 3 sqrt(BCR) = 10.628 m +- 0.129 m (1.21 %)
+mc =  15000 : 3 sqrt(BCR) = 10.667 m +- 0.064 m (0.60 %)
