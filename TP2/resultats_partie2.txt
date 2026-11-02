@@ -1,0 +1,112 @@
+
+################  Q0  ################
+
+=== Q0 : référence ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+       fichier fourni (Q x2, R x2) |    0.140 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.25
+        bruits exacts (Q x1, R x1) |    0.147 |   0.65 |  98.1% |   0.56 |     0.62 |       nan |    nan |       999 | 0/5     |   0.25
+
+################  Q1  ################
+
+=== Q1a : bruit de mouvement du filtre ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+                    Q x0.01 | R x1 |    2.036 |   5.75 |   0.0% |   0.94 |     0.94 |       nan |    nan |       999 | 2/5     |   0.25
+                     Q x0.1 | R x1 |    0.284 |   1.10 |  15.3% |   0.68 |     0.73 |       nan |    nan |       999 | 0/5     |   0.24
+                     Q x0.5 | R x1 |    0.158 |   0.69 |  86.3% |   0.61 |     0.66 |       nan |    nan |       999 | 0/5     |   0.25
+                       Q x1 | R x1 |    0.147 |   0.65 |  98.1% |   0.56 |     0.62 |       nan |    nan |       999 | 0/5     |   0.25
+                       Q x2 | R x1 |    0.142 |   0.66 |  99.7% |   0.50 |     0.57 |       nan |    nan |       999 | 0/5     |   0.26
+                      Q x10 | R x1 |    0.182 |   0.75 | 100.0% |   0.32 |     0.42 |       nan |    nan |       999 | 0/5     |   0.25
+                     Q x100 | R x1 |    0.325 |   0.86 | 100.0% |   0.11 |     0.20 |       nan |    nan |       999 | 0/5     |   0.25
+
+=== Q1b : bruit de perception du filtre ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+                    Q x1 | R x0.01 |    0.530 |   1.61 |  32.3% |   0.67 |     0.78 |       nan |    nan |       999 | 0/5     |   0.25
+                     Q x1 | R x0.1 |    0.223 |   0.90 |  55.6% |   0.36 |     0.52 |       nan |    nan |       999 | 0/5     |   0.25
+                     Q x1 | R x0.5 |    0.148 |   0.67 |  92.3% |   0.42 |     0.52 |       nan |    nan |       999 | 0/5     |   0.25
+                       Q x1 | R x1 |    0.147 |   0.65 |  98.1% |   0.56 |     0.62 |       nan |    nan |       999 | 0/5     |   0.25
+                       Q x1 | R x2 |    0.147 |   0.67 |  99.3% |   0.70 |     0.72 |       nan |    nan |       999 | 0/5     |   0.26
+                      Q x1 | R x10 |    0.181 |   0.93 |  99.8% |   0.91 |     0.87 |       nan |    nan |       999 | 0/5     |   0.24
+                     Q x1 | R x100 |    0.251 |   1.76 | 100.0% |   0.99 |     0.96 |       nan |    nan |       999 | 0/5     |   0.24
+
+=== Q1c : combinaisons (petit / égal / grand) ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+                   Q x0.1 | R x0.1 |    1.721 |   5.48 |   4.9% |   0.78 |     0.84 |       nan |    nan |       999 | 0/5     |   0.24
+                     Q x0.1 | R x1 |    0.284 |   1.10 |  15.3% |   0.68 |     0.73 |       nan |    nan |       999 | 0/5     |   0.24
+                    Q x0.1 | R x10 |    0.373 |   1.82 |  28.9% |   0.94 |     0.91 |       nan |    nan |       999 | 0/5     |   0.24
+                     Q x1 | R x0.1 |    0.223 |   0.90 |  55.6% |   0.36 |     0.52 |       nan |    nan |       999 | 0/5     |   0.24
+                       Q x1 | R x1 |    0.147 |   0.65 |  98.1% |   0.56 |     0.62 |       nan |    nan |       999 | 0/5     |   0.25
+                      Q x1 | R x10 |    0.181 |   0.93 |  99.8% |   0.91 |     0.87 |       nan |    nan |       999 | 0/5     |   0.25
+                    Q x10 | R x0.1 |    0.323 |   0.89 |  79.5% |   0.20 |     0.38 |       nan |    nan |       999 | 0/5     |   0.25
+                      Q x10 | R x1 |    0.182 |   0.75 | 100.0% |   0.32 |     0.42 |       nan |    nan |       999 | 0/5     |   0.25
+                     Q x10 | R x10 |    0.144 |   0.65 | 100.0% |   0.75 |     0.74 |       nan |    nan |       999 | 0/5     |   0.25
+
+################  Q2  ################
+
+=== Q2 : nombre de particules ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+                              N=10 |    0.383 |   0.79 |  25.3% |   0.66 |     0.68 |       nan |    nan |       999 | 0/5     |   0.08
+                              N=30 |    0.230 |   0.68 |  73.9% |   0.65 |     0.68 |       nan |    nan |       999 | 0/5     |   0.09
+                             N=100 |    0.161 |   0.66 |  97.2% |   0.65 |     0.68 |       nan |    nan |       999 | 0/5     |   0.10
+                             N=300 |    0.150 |   0.65 |  99.9% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.13
+                            N=1000 |    0.140 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.34
+                            N=3000 |    0.139 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.63
+                           N=10000 |    0.138 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   1.97
+
+################  Q3  ################
+
+=== Q3 : panne capteur ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+                   courte, fichier |    0.137 |   0.65 | 100.0% |   0.68 |     0.67 |      0.90 |    0.0 |       899 | 0/5     |   0.23
+                 courte, Q x1 R x1 |    0.143 |   0.65 |  98.1% |   0.61 |     0.62 |      0.89 |    0.0 |       899 | 0/5     |   0.24
+                     courte, Q x10 |    0.164 |   0.72 | 100.0% |   0.51 |     0.52 |      1.27 |    0.8 |       899 | 0/5     |   0.27
+                     courte, N=100 |    0.168 |   0.66 |  96.7% |   0.69 |     0.67 |      0.96 |    0.6 |       899 | 0/5     |   0.09
+                   courte, N=10000 |    0.136 |   0.64 | 100.0% |   0.68 |     0.67 |      0.91 |    0.0 |       899 | 0/5     |   1.86
+                   longue, fichier |    0.136 |   0.64 |  99.9% |   0.76 |     0.67 |      3.88 |    0.2 |       699 | 0/5     |   0.21
+                 longue, Q x1 R x1 |    0.143 |   0.65 |  99.1% |   0.70 |     0.61 |      3.70 |    0.2 |       699 | 0/5     |   0.24
+                     longue, Q x10 |    0.165 |   0.71 |  99.5% |   0.62 |     0.52 |      7.01 |    1.6 |       699 | 0/5     |   0.22
+                     longue, N=100 |    0.165 |   0.66 |  95.7% |   0.76 |     0.67 |      4.23 |    0.4 |       699 | 0/5     |   0.08
+                   longue, N=10000 |    0.135 |   0.64 | 100.0% |   0.76 |     0.67 |      3.96 |    0.4 |       699 | 0/5     |   1.61
+              tres_longue, fichier |    0.156 |   0.67 |  96.4% |   0.90 |     0.66 |     12.95 |    6.6 |       299 | 0/5     |   0.15
+            tres_longue, Q x1 R x1 |    0.325 |   0.76 |  91.7% |   0.88 |     0.62 |     11.09 |   27.2 |       299 | 0/5     |   0.15
+                tres_longue, Q x10 |    0.182 |   0.72 |  95.9% |   0.86 |     0.53 |     29.26 |   28.0 |       299 | 1/5     |   0.15
+                tres_longue, N=100 |    0.702 |   1.01 |  89.8% |   0.91 |     0.68 |     12.59 |   55.0 |       299 | 1/5     |   0.06
+              tres_longue, N=10000 |    0.147 |   0.66 |  98.6% |   0.90 |     0.67 |     13.07 |    2.6 |       299 | 0/5     |   1.08
+                  longue, previous |    0.136 |   0.64 |  99.9% |   0.76 |     0.67 |      3.88 |    0.2 |       699 | 0/5     |   0.20
+
+################  Q4  ################
+
+=== Q4 : poids et schéma de rééchantillonnage ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+             likelihood, bootstrap |    0.140 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.25
+      likelihood, SIR (Neff < N/2) |    0.158 |   0.69 | 100.0% |   0.55 |     0.49 |       nan |    nan |       322 | 0/5     |   0.19
+          likelihood, SIS (jamais) |    5.938 |   5.11 | 100.0% |   0.04 |     1.00 |       nan |    nan |         0 | 5/5     |   0.15
+               previous, bootstrap |    0.140 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/5     |   0.25
+        previous, SIR (Neff < N/2) |    0.146 |   0.65 | 100.0% |   0.53 |     0.49 |       nan |    nan |       477 | 0/5     |   0.20
+            previous, SIS (jamais) |    1.665 |  10.47 |   1.1% |   0.00 |     1.00 |       nan |    nan |         0 | 0/5     |   0.15
+
+=== Q4b : seuil NEFF_RATIO ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+           previous, SIR ratio=0.1 |    0.147 |   0.65 |  99.9% |   0.30 |     0.22 |       nan |    nan |       182 | 0/5     |   0.19
+           previous, SIR ratio=0.3 |    0.144 |   0.64 |  99.9% |   0.43 |     0.37 |       nan |    nan |       317 | 0/5     |   0.23
+           previous, SIR ratio=0.5 |    0.146 |   0.65 | 100.0% |   0.53 |     0.49 |       nan |    nan |       477 | 0/5     |   0.21
+           previous, SIR ratio=0.8 |    0.139 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       998 | 0/5     |   0.28
+
+################  Q5  ################
+
+=== Q5 : méthodes de rééchantillonnage (N = 1000) ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+       N=1000, multinomial, always |    0.141 |   0.65 | 100.0% |   0.65 |     0.52 |       nan |    nan |       999 | 0/10    |   0.30
+        N=1000, stratified, always |    0.137 |   0.64 | 100.0% |   0.65 |     0.64 |       nan |    nan |       999 | 0/10    |   0.25
+        N=1000, systematic, always |    0.135 |   0.64 | 100.0% |   0.65 |     0.67 |       nan |    nan |       999 | 0/10    |   0.25
+         N=1000, multinomial, neff |    0.138 |   0.65 | 100.0% |   0.53 |     0.41 |       nan |    nan |       475 | 0/10    |   0.22
+          N=1000, stratified, neff |    0.139 |   0.65 | 100.0% |   0.52 |     0.47 |       nan |    nan |       475 | 0/10    |   0.21
+          N=1000, systematic, neff |    0.140 |   0.65 | 100.0% |   0.52 |     0.49 |       nan |    nan |       475 | 0/10    |   0.20
+
+=== Q5 : méthodes de rééchantillonnage (N = 100) ===
+                            config |  err moy |  θ (°) |    ±3σ | Neff/N | distinct | max panne |  récup | resamples | diverge |  temps
+        N=100, multinomial, always |    0.199 |   0.66 |  89.1% |   0.65 |     0.52 |       nan |    nan |       999 | 0/10    |   0.10
+         N=100, stratified, always |    0.166 |   0.65 |  97.8% |   0.65 |     0.64 |       nan |    nan |       999 | 0/10    |   0.10
+         N=100, systematic, always |    0.164 |   0.66 |  97.9% |   0.65 |     0.68 |       nan |    nan |       999 | 0/10    |   0.10
+          N=100, multinomial, neff |    0.183 |   0.66 |  94.1% |   0.53 |     0.41 |       nan |    nan |       470 | 0/10    |   0.09
+           N=100, stratified, neff |    0.165 |   0.66 |  97.0% |   0.53 |     0.47 |       nan |    nan |       471 | 0/10    |   0.09
+           N=100, systematic, neff |    0.156 |   0.66 |  98.7% |   0.53 |     0.49 |       nan |    nan |       472 | 0/10    |   0.09

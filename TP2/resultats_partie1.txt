@@ -1,0 +1,15 @@
+mu = 2/pi = 0.636620
+méthode                                | V théo (1 éch.) | V(mu_N) théo N=50 | V(mu_N) emp. N=50 | biais emp. | unif./estim. | temps
+force brute (q = U[0,1])               |       9.472e-02 |         1.894e-03 |         1.879e-03 | -2.2e-04 |         50.0 |  0.15 s
+importance 3/2(1-x²) par rejet         |       9.908e-04 |         1.982e-05 |         1.950e-05 | +2.2e-05 |        150.0 |  0.85 s
+importance 2(1-x) par inversion        |       6.785e-03 |         1.357e-04 |         1.336e-04 | -9.3e-05 |         50.0 |  0.18 s
+importance optimale (π/2)cos(πx/2)     |      -1.110e-16 |        -2.220e-18 |         1.337e-32 | -1.1e-16 |         50.0 |  0.19 s
+rapport des variances force brute / importance 3/2(1-x²) par rejet : théorique 95.6, simulé 96.3
+rapport des variances force brute / importance 2(1-x) par inversion : théorique 14.0, simulé 14.1
+probabilité d'acceptation du rejet : théorique 2/3 = 0.6667, simulée 0.6665
+racine positive de 1 - pi^2 x^2 / 8 : x = 0.9003
+DL normalisé sur [0,1] : C = 24/(24 - pi^2) = 1.6985, valeur en x = 1 : -0.397
+DL tronqué à [0, 0.9003] : moyenne des estimations 0.62889, valeur visée mu sin(sqrt 2) = 0.62883, biais -0.00773 (-1.21 %)
+KS force brute (q = U[0,1])            : p-value = 0.574, écart-type empirique de z = 0.996
+KS importance 3/2(1-x²) par rejet      : p-value = 0.000, écart-type empirique de z = 0.992
+KS importance 2(1-x) par inversion     : p-value = 0.603, écart-type empirique de z = 0.992
